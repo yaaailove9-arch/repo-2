@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaPress - Jasa Publikasi Artikel & Press Release Media Massa Berita</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(37, 99, 235, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(37, 99, 235, 0.8); }
+        }
+        .glow-effect {
+            animation: pulse-glow 3s infinite;
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen flex flex-col justify-between items-center selection:bg-brand-500 selection:text-white">
+
+    <!-- Container Utama (Link in Bio Mobile First View) -->
+    <div class="w-full max-w-md bg-slate-900 min-h-screen shadow-2xl flex flex-col justify-between border-x border-slate-800 relative pb-12">
+
+        <!-- Top Announcement Bar (Dynamic from Admin) -->
+        <div id="promo-bar-container" class="bg-gradient-to-r from-brand-700 via-brand-600 to-indigo-600 text-white text-[11px] font-medium py-2 px-3 text-center flex items-center justify-between sticky top-0 z-40 shadow-md">
+            <div class="flex items-center space-x-1.5 overflow-hidden text-ellipsis whitespace-nowrap mx-auto">
+                <i class="fa-solid fa-bullhorn animate-bounce text-amber-300"></i>
+                <span id="promo-text-display">🔥 Promo Minggu Ini: Diskon Publikasi Media Cetak & Online Hingga 30%!</span>
+            </div>
+        </div>
+
+        <!-- Header / Bio Profile Section -->
+        <header class="pt-8 px-6 text-center flex flex-col items-center">
+            <!-- Badge Status Online -->
+            <div class="mb-3 inline-flex items-center space-x-2 bg-emerald-950/80 border border-emerald-500/30 px-3 py-1 rounded-full text-[11px] font-semibold text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span>Layanan Aktif 24/7 • Fast Response</span>
+            </div>
+
+            <!-- Logo Avatar -->
+            <div class="relative mb-4">
+                <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-brand-600 to-indigo-500 p-1 shadow-lg shadow-brand-500/20">
+                    <div class="w-full h-full bg-slate-900 rounded-full flex items-center justify-center border-2 border-slate-800">
+                        <i class="fa-solid fa-newspaper text-3xl text-brand-500"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 right-0 bg-brand-500 text-white p-1.5 rounded-full text-xs shadow">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+
+            <!-- Profile Title & Subtitle -->
+            <h1 class="text-xl font-extrabold text-white tracking-tight flex items-center justify-center gap-1.5">
+                MediaPress ID
+                <i class="fa-solid fa-badge-check text-brand-500 text-sm"></i>
+            </h1>
+            <p class="text-xs font-semibold text-brand-400 mt-0.5">Jasa Publikasi Artikel & Press Release Media Massa</p>
+            
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                Terbitkan artikel bisnis, personal branding, & press release di media nasional terpercaya. <br>
+                <span class="text-amber-400 font-medium">Harga mulai Rp 20.000</span> | Maksimal 1x24 Jam!
+            </p>
+
+            <!-- Main CTA Button -->
+            <a id="main-wa-btn" href="https://wa.me/6285922106116?text=Halo%20MediaPress,%20saya%20ingin%20konsultasi%20publikasi%20artikel%20media%20massa." target="_blank" 
+               class="mt-5 w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-3 px-4 rounded-2xl shadow-lg shadow-emerald-600/20 flex items-center justify-center space-x-2 transition-all transform active:scale-95 glow-effect">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span class="text-sm">Pesan via WhatsApp Sekarang</span>
+            </a>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="px-5 mt-6 space-y-6">
+
+            <!-- SECTION: CEK STATUS PESANAN -->
+            <section class="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/60 shadow-md">
+                <div class="flex items-center space-x-2 mb-3">
+                    <div class="p-2 bg-brand-500/20 text-brand-400 rounded-lg text-xs">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xs font-bold text-white uppercase tracking-wider">Cek Status Pesanan</h2>
+                        <p class="text-[10px] text-slate-400">Pantau proses terbit artikel Anda secara real-time</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <input type="text" id="track-id-input" placeholder="Masukkan ID Pesanan (mis: PR-1001)" 
+                           class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:border-brand-500 font-mono uppercase">
+                    <button onclick="trackOrder()" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-4 py-2 rounded-xl transition-colors whitespace-nowrap flex items-center space-x-1">
+                        <span>Lacak</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Result Container for Order Tracking -->
+                <div id="tracking-result-box" class="mt-4 hidden"></div>
+            </section>
+
+            <!-- SECTION: KEUNGGULAN UTAMA -->
+            <section class="grid grid-cols-2 gap-3">
+                <div class="bg-slate-800/40 p-3 rounded-2xl border border-slate-700/40 flex flex-col items-center text-center">
+                    <div class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-sm mb-2">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-200">Garansi 100% Terbit</h3>
+                    <p class="text-[10px] text-slate-400 mt-1">Uang kembali utuh jika artikel gagal tayang.</p>
+                </div>
+                <div class="bg-slate-800/40 p-3 rounded-2xl border border-slate-700/40 flex flex-col items-center text-center">
+                    <div class="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-sm mb-2">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-200">Proses &lt; 24 Jam</h3>
+                    <p class="text-[10px] text-slate-400 mt-1">Pengerjaan kilat untuk deadline cepat.</p>
+                </div>
+                <div class="bg-slate-800/40 p-3 rounded-2xl border border-slate-700/40 flex flex-col items-center text-center">
+                    <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-sm mb-2">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-200">Puluhan Media</h3>
+                    <p class="text-[10px] text-slate-400 mt-1">Pilihan media lokal, nasional, & premium.</p>
+                </div>
+                <div class="bg-slate-800/40 p-3 rounded-2xl border border-slate-700/40 flex flex-col items-center text-center">
+                    <div class="w-8 h-8 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-sm mb-2">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="text-xs font-bold text-slate-200">Termurah Mulai 20k</h3>
+                    <p class="text-[10px] text-slate-400 mt-1">Sesuai anggaran UMKM hingga Corporate.</p>
+                </div>
+            </section>
+
+            <!-- SECTION: PILIHAN MEDIA & PAKET -->
+            <section>
+                <div class="flex items-center justify-between mb-3">
+                    <h2 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fa-solid fa-layer-group text-brand-400"></i>
+                        Pilihan Paket & Media
+                    </h2>
+                    <span class="text-[10px] bg-brand-500/20 text-brand-300 px-2 py-0.5 rounded-full font-medium">Populer</span>
+                </div>
+
+                <div class="space-y-3">
+                    <!-- Card Media 1 -->
+                    <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700/60 hover:border-brand-500/50 transition-all">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <span class="bg-slate-700 text-slate-300 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Paket Hemat</span>
+                                <h3 class="text-sm font-bold text-white mt-1">Media Media Massa Blog / Network</h3>
+                            </div>
+                            <span class="text-sm font-extrabold text-amber-400">Rp 20.000 <span class="text-[10px] text-slate-400 font-normal">/ artikel</span></span>
+                        </div>
+                        <ul class="text-[11px] text-slate-300 space-y-1 mb-3">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-[10px] mr-1.5"></i> Permanen Backlink (DoFollow)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-[10px] mr-1.5"></i> Pengerjaan Max 12 Jam</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-[10px] mr-1.5"></i> Cocok untuk SEO & Bio Link</li>
+                        </ul>
+                        <button onclick="orderMedia('Paket Hemat (Rp 20.000)')" class="w-full bg-slate-700 hover:bg-brand-600 text-white font-semibold py-2 rounded-xl text-xs transition-colors flex items-center justify-center space-x-1.5">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Pesan Paket Hemat</span>
+                        </button>
+                    </div>
+
+                    <!-- Card Media 2 -->
+                    <div class="bg-slate-800 p-4 rounded-2xl border border-brand-500/40 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-brand-600 text-white text-[9px] font-bold px-3 py-0.5 rounded-bl-lg">BEST SELLER</div>
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <span class="bg-brand-500/20 text-brand-300 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Nasional Standard</span>
+                                <h3 class="text-sm font-bold text-white mt-1">Media Online Regional & Nasional</h3>
+                            </div>
+                            <span class="text-sm font-extrabold text-amber-400">Rp 75.000 <span class="text-[10px] text-slate-400 font-normal">/ artikel</span></span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 mb-2">Pilihan: BeritaLokal, Timurnews, MediaJabar, dll.</p>
+                        <ul class="text-[11px] text-slate-300 space-y-1 mb-3">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-[10px] mr-1.5"></i> Indeks Google News Cepat</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-[10px] mr-1.5"></i> Pengerjaan 1x24 Jam</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-[10px] mr-1.5"></i> Garansi Terbit 100%</li>
+                        </ul>
+                        <button onclick="orderMedia('Paket Nasional Standard (Rp 75.000)')" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-2 rounded-xl text-xs transition-colors flex items-center justify-center space-x-1.5">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Pesan Paket Nasional</span>
+                        </button>
+                    </div>
+
+                    <!-- Card Media 3 -->
+                    <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700/60 hover:border-brand-500/50 transition-all">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <span class="bg-purple-500/20 text-purple-300 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Tier-1 Tier-2</span>
+                                <h3 class="text-sm font-bold text-white mt-1">Media Utama Tier-1 Nasional</h3>
+                            </div>
+                            <span class="text-sm font-extrabold text-amber-400">Rp 250.000+</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 mb-2">Pilihan: VIVA, Suara, Kompasiana Verified, dll.</p>
+                        <ul class="text-[11px] text-slate-300 space-y-1 mb-3">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-[10px] mr-1.5"></i> High Domain Authority (DA/PA)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 text-[10px] mr-1.5"></i> Meningkatkan Kredibilitas Brand</li>
+                        </ul>
+                        <button onclick="orderMedia('Paket Premium Tier-1 (Konsultasi)')" class="w-full bg-slate-700 hover:bg-brand-600 text-white font-semibold py-2 rounded-xl text-xs transition-colors flex items-center justify-center space-x-1.5">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Konsultasi Media Premium</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: TESTIMONI KLIEN -->
+            <section>
+                <div class="flex items-center justify-between mb-3">
+                    <h2 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fa-solid fa-comments text-brand-400"></i>
+                        Testimoni Klien
+                    </h2>
+                    <span class="text-[10px] text-slate-400">Kepuasan Pelanggan</span>
+                </div>
+
+                <!-- Testimonial Slider Container -->
+                <div id="testimonials-container" class="flex overflow-x-auto gap-3 pb-2 hide-scrollbar snap-x">
+                    <!-- Placeholder Loading -->
+                    <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700/60 min-w-[260px] max-w-[260px] snap-center">
+                        <p class="text-xs text-slate-400 italic">Memuat testimoni terbaru...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: FAQ PENDEK -->
+            <section class="bg-slate-800/40 rounded-2xl p-4 border border-slate-700/40 space-y-3">
+                <h2 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Pertanyaan Umum (FAQ)</h2>
+                <div>
+                    <h4 class="text-xs font-semibold text-white">Berapa lama artikel diterbitkan?</h4>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Rata-rata 2 hingga 24 jam setelah draf disetujui.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold text-white">Apakah artikel dituliskan?</h4>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Ya, Anda cukup memberikan detail/poin-poin berita, tim kami siap buatkan draf artikelnya.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="mt-8 px-6 text-center text-slate-500 border-t border-slate-800/80 pt-6">
+            <p class="text-[11px]">&copy; 2026 MediaPress ID. All rights reserved.</p>
+            <p class="text-[10px] mt-1 text-slate-600">Layanan Diproses Cepat & Terpercaya</p>
+            
+            <!-- Admin Toggle Trigger -->
+            <div class="mt-4">
+                <button onclick="toggleAdminPanel()" class="text-[11px] text-slate-500 hover:text-brand-400 underline transition-colors inline-flex items-center space-x-1">
+                    <i class="fa-solid fa-lock text-[10px]"></i>
+                    <span>Login Admin Dashboard</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ADMIN MODAL / CONTAINER (Hidden by Default) -->
+    <div id="admin-modal" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-lg rounded-3xl p-6 shadow-2xl max-h-[90vh] overflow-y-auto relative">
+            
+            <!-- Close Admin Modal -->
+            <button onclick="toggleAdminPanel()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 text-sm">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Admin Title -->
+            <div class="flex items-center space-x-2 mb-6 border-b border-slate-800 pb-4">
+                <div class="p-2 bg-brand-600/20 text-brand-400 rounded-xl">
+                    <i class="fa-solid fa-user-shield text-lg"></i>
+                </div>
+                <div>
+                    <h2 class="text-base font-bold text-white">Panel Admin MediaPress</h2>
+                    <p class="text-xs text-slate-400">Kelola Pesanan, Testimoni & Pengaturan Website</p>
+                </div>
+            </div>
+
+            <!-- LOGIN FORM (Shown when logged out) -->
+            <div id="admin-login-section" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-slate-400 mb-1">Email Admin</label>
+                    <input type="email" id="admin-email" value="kentang@gmail.com" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-400 mb-1">Password Admin</label>
+                    <input type="password" id="admin-password" value="12Juli2007" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-brand-500">
+                </div>
+                <div id="login-error-msg" class="text-rose-400 text-xs hidden"></div>
+                <button onclick="handleAdminLogin()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 rounded-xl text-xs transition-colors">
+                    Masuk ke Dashboard Admin
+                </button>
+            </div>
+
+            <!-- DASHBOARD CONTENT (Shown when logged in) -->
+            <div id="admin-dashboard-section" class="space-y-6 hidden">
+                
+                <!-- Admin Header & Logout -->
+                <div class="flex items-center justify-between bg-slate-800/60 p-3 rounded-2xl border border-slate-700/50">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span id="admin-user-email" class="text-xs text-slate-300 font-mono">admin@mediapress.com</span>
+                    </div>
+                    <button onclick="handleAdminLogout()" class="text-xs text-rose-400 hover:text-rose-300 font-medium">
+                        <i class="fa-solid fa-right-from-bracket mr-1"></i> Logout
+                    </button>
+                </div>
+
+                <!-- TAB NAVIGATION ADMIN -->
+                <div class="flex border-b border-slate-800 text-xs font-semibold">
+                    <button id="tab-btn-orders" onclick="switchAdminTab('orders')" class="py-2 px-3 border-b-2 border-brand-500 text-brand-400">Kelola Pesanan</button>
+                    <button id="tab-btn-testimonials" onclick="switchAdminTab('testimonials')" class="py-2 px-3 border-b-2 border-transparent text-slate-400 hover:text-white">Testimoni</button>
+                    <button id="tab-btn-settings" onclick="switchAdminTab('settings')" class="py-2 px-3 border-b-2 border-transparent text-slate-400 hover:text-white">Pengaturan Site</button>
+                </div>
+
+                <!-- TAB 1: KELOLA PESANAN -->
+                <div id="admin-tab-orders" class="space-y-5">
+                    <!-- Form Tambah/Edit Pesanan -->
+                    <div class="bg-slate-800/50 p-4 rounded-2xl border border-slate-700/50 space-y-3">
+                        <h3 class="text-xs font-bold text-white uppercase tracking-wider flex justify-between items-center">
+                            <span>Buat / Input Pesanan Baru</span>
+                            <button onclick="generateRandomOrderId()" class="text-[10px] bg-brand-500/20 text-brand-300 px-2 py-1 rounded-lg">Auto Generate ID</button>
+                        </h3>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-[10px] text-slate-400 mb-1">ID Pesanan</label>
+                                <input type="text" id="input-order-id" placeholder="mis: PR-1001" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white uppercase font-mono">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-slate-400 mb-1">Nama Pembeli</label>
+                                <input type="text" id="input-customer-name" placeholder="Nama Klien" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-[10px] text-slate-400 mb-1">No WhatsApp</label>
+                                <input type="text" id="input-customer-phone" placeholder="62812345678" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white font-mono">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-slate-400 mb-1">Paket Media</label>
+                                <input type="text" id="input-media-package" placeholder="Paket Nasional Standard" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] text-slate-400 mb-1">Status Pengerjaan</label>
+                            <select id="input-order-status" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white">
+                                <option value="Pesanan Diterima">🟡 Pesanan Diterima (25%)</option>
+                                <option value="Proses Penulisan Artikel">🔵 Proses Penulisan Artikel (50%)</option>
+                                <option value="Proses Kirim ke Redaksi Media">🟣 Proses Kirim ke Redaksi (75%)</option>
+                                <option value="Selesai / Terbit">🟢 Selesai / Terbit (100%)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] text-slate-400 mb-1">Link Artikel Terbit (Jika Sudah Selesai)</label>
+                            <input type="url" id="input-article-link" placeholder="https://berita.com/artikel-klien" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white">
+                        </div>
+
+                        <button onclick="saveOrder()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition-colors flex items-center justify-center space-x-1">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            <span>Simpan / Update Pesanan</span>
+                        </button>
+                    </div>
+
+                    <!-- Daftar Pesanan Aktif -->
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300 mb-2">Daftar Pesanan Terdaftar</h3>
+                        <div id="admin-orders-list" class="space-y-2 max-h-60 overflow-y-auto pr-1">
+                            <p class="text-xs text-slate-500 italic">Memuat data pesanan...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: KELOLA TESTIMONI -->
+                <div id="admin-tab-testimonials" class="space-y-5 hidden">
+                    <div class="bg-slate-800/50 p-4 rounded-2xl border border-slate-700/50 space-y-3">
+                        <h3 class="text-xs font-bold text-white uppercase tracking-wider">Tambah Testimoni Baru</h3>
+                        
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-[10px] text-slate-400 mb-1">Nama Klien</label>
+                                <input type="text" id="input-testi-name" placeholder="Budi Santoso" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] text-slate-400 mb-1">Bisnis / Brand</label>
+                                <input type="text" id="input-testi-role" placeholder="Owner PT Maju Jaya" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] text-slate-400 mb-1">Rating Bintang (1-5)</label>
+                            <select id="input-testi-rating" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white">
+                                <option value="5">⭐⭐⭐⭐⭐ (5 Bintang)</option>
+                                <option value="4">⭐⭐⭐⭐ (4 Bintang)</option>
+                                <option value="3">⭐⭐⭐ (3 Bintang)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] text-slate-400 mb-1">Isi Testimoni</label>
+                            <textarea id="input-testi-content" rows="2" placeholder="Tuliskan ulasan klien di sini..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white"></textarea>
+                        </div>
+
+                        <button onclick="saveTestimonial()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-2 rounded-xl text-xs transition-colors">
+                            Tambah Testimoni
+                        </button>
+                    </div>
+
+                    <!-- List Testimoni Admin -->
+                    <div>
+                        <h3 class="text-xs font-bold text-slate-300 mb-2">Daftar Testimoni</h3>
+                        <div id="admin-testimonials-list" class="space-y-2 max-h-52 overflow-y-auto pr-1">
+                            <p class="text-xs text-slate-500 italic">Memuat testimoni...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: PENGATURAN SITE -->
+                <div id="admin-tab-settings" class="space-y-4 hidden">
+                    <div class="bg-slate-800/50 p-4 rounded-2xl border border-slate-700/50 space-y-3">
+                        <h3 class="text-xs font-bold text-white uppercase tracking-wider">Edit Pengaturan Website</h3>
+                        
+                        <div>
+                            <label class="block text-[10px] text-slate-400 mb-1">Nomor WhatsApp Tujuan Utama (Format: 628xxx)</label>
+                            <input type="text" id="input-setting-wa" placeholder="6285922106116" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white font-mono">
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] text-slate-400 mb-1">Teks Promo Baris Atas</label>
+                            <input type="text" id="input-setting-promo" placeholder="Promo Diskon Minggu Ini..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white">
+                        </div>
+
+                        <button onclick="saveSiteSettings()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition-colors">
+                            Simpan Pengaturan
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast Notification -->
+    <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-slate-800 text-white border border-slate-700 text-xs px-4 py-2.5 rounded-full shadow-2xl flex items-center space-x-2 transition-all opacity-0 pointer-events-none z-50">
+        <i id="toast-icon" class="fa-solid fa-circle-info text-brand-400"></i>
+        <span id="toast-message">Notifikasi</span>
+    </div>
+
+    <!-- Firebase SDK Modular Imports -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, getDoc, collection, onSnapshot, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Firebase Configuration Setup
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'mediapress-app';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
+            apiKey: "AIzaSyDummyKeyForFallbackOnly12345",
+            authDomain: "mediapress-demo.firebaseapp.com",
+            projectId: "mediapress-demo",
+            storageBucket: "mediapress-demo.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:abcdef123456"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        let currentUser = null;
+        let whatsappNumber = "6285922106116"; // Global WA Default
+        let promoText = "🔥 Promo Minggu Ini: Diskon Publikasi Media Cetak & Online Hingga 30%!";
+
+        // Collections Paths
+        const publicDataPath = (col) => collection(db, 'artifacts', appId, 'public', 'data', col);
+        const publicDocPath = (col, docId) => doc(db, 'artifacts', appId, 'public', 'data', col, docId);
+
+        // Initial Auth Setup
+        async function initAuth() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (err) {
+                console.error("Auth Error:", err);
+            }
+        }
+        initAuth();
+
+        onAuthStateChanged(auth, (user) => {
+            currentUser = user;
+            if (user && !user.isAnonymous) {
+                document.getElementById('admin-login-section').classList.add('hidden');
+                document.getElementById('admin-dashboard-section').classList.remove('hidden');
+                document.getElementById('admin-user-email').innerText = user.email || "admin";
+            } else {
+                document.getElementById('admin-login-section').classList.remove('hidden');
+                document.getElementById('admin-dashboard-section').classList.add('hidden');
+            }
+        });
+
+        // 1. LISTEN TO SITE SETTINGS REALTIME
+        onSnapshot(publicDocPath('settings', 'config'), (snapshot) => {
+            if (snapshot.exists()) {
+                const data = snapshot.data();
+                if (data.whatsappNumber) {
+                    whatsappNumber = data.whatsappNumber;
+                    document.getElementById('input-setting-wa').value = whatsappNumber;
+                }
+                if (data.promoText) {
+                    promoText = data.promoText;
+                    document.getElementById('promo-text-display').innerText = promoText;
+                    document.getElementById('input-setting-promo').value = promoText;
+                }
+            }
+            updateWaLinks();
+        }, (err) => console.log("Settings listener err:", err));
+
+        // 2. LISTEN TO TESTIMONIALS REALTIME
+        onSnapshot(publicDataPath('testimonials'), (snapshot) => {
+            const testimonialsContainer = document.getElementById('testimonials-container');
+            const adminTestimonialsList = document.getElementById('admin-testimonials-list');
+            
+            testimonialsContainer.innerHTML = '';
+            adminTestimonialsList.innerHTML = '';
+
+            if (snapshot.empty) {
+                testimonialsContainer.innerHTML = `
+                    <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700/60 min-w-[260px] snap-center">
+                        <p class="text-xs text-slate-400">Belum ada testimoni.</p>
+                    </div>`;
+                adminTestimonialsList.innerHTML = `<p class="text-xs text-slate-500 italic">Belum ada testimoni tersimpan.</p>`;
+                return;
+            }
+
+            snapshot.forEach((docSnap) => {
+                const item = docSnap.data();
+                const id = docSnap.id;
+
+                // Render Public Testimonial Card
+                const starsHtml = '⭐'.repeat(item.rating || 5);
+                const card = document.createElement('div');
+                card.className = 'bg-slate-800 p-4 rounded-2xl border border-slate-700/60 min-w-[260px] max-w-[260px] snap-center flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs">${starsHtml}</span>
+                            <i class="fa-solid fa-quote-right text-slate-600 text-xs"></i>
+                        </div>
+                        <p class="text-[11px] text-slate-300 italic mb-3">"${item.content}"</p>
+                    </div>
+                    <div class="border-t border-slate-700/50 pt-2 flex items-center justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-white">${item.name}</h4>
+                            <p class="text-[10px] text-slate-400">${item.role || 'Klien MediaPress'}</p>
+                        </div>
+                    </div>
+                `;
+                testimonialsContainer.appendChild(card);
+
+                // Render Admin Testimonial Item
+                const adminItem = document.createElement('div');
+                adminItem.className = 'bg-slate-900 p-2.5 rounded-xl border border-slate-800 flex justify-between items-center text-xs';
+                adminItem.innerHTML = `
+                    <div>
+                        <span class="font-bold text-white">${item.name}</span> (${item.role})
+                        <div class="text-[10px] text-slate-400">${starsHtml} - "${item.content.substring(0, 30)}..."</div>
+                    </div>
+                    <button onclick="deleteTestimonial('${id}')" class="text-rose-400 hover:text-rose-300 p-1">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                `;
+                adminTestimonialsList.appendChild(adminItem);
+            });
+        }, (err) => console.log("Testimonials listener err:", err));
+
+        // 3. LISTEN TO ORDERS FOR ADMIN
+        onSnapshot(publicDataPath('orders'), (snapshot) => {
+            const adminOrdersList = document.getElementById('admin-orders-list');
+            adminOrdersList.innerHTML = '';
+
+            if (snapshot.empty) {
+                adminOrdersList.innerHTML = `<p class="text-xs text-slate-500 italic">Belum ada data pesanan.</p>`;
+                return;
+            }
+
+            snapshot.forEach((docSnap) => {
+                const order = docSnap.data();
+                const id = docSnap.id;
+
+                const item = document.createElement('div');
+                item.className = 'bg-slate-900 p-3 rounded-xl border border-slate-800 text-xs space-y-2';
+                
+                let statusBadge = 'bg-amber-500/20 text-amber-300';
+                if (order.status === 'Selesai / Terbit') statusBadge = 'bg-emerald-500/20 text-emerald-300';
+                else if (order.status.includes('Penulisan')) statusBadge = 'bg-brand-500/20 text-brand-300';
+                else if (order.status.includes('Redaksi')) statusBadge = 'bg-purple-500/20 text-purple-300';
+
+                item.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="font-mono font-bold text-brand-400">[${order.orderId}]</span>
+                            <span class="font-bold text-white ml-1">${order.customerName}</span>
+                        </div>
+                        <span class="text-[9px] px-2 py-0.5 rounded-full font-semibold ${statusBadge}">${order.status}</span>
+                    </div>
+                    <div class="text-[10px] text-slate-400 flex justify-between">
+                        <span>Paket: ${order.mediaPackage}</span>
+                        <span>Tgl: ${order.date || '-'}</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-1 border-t border-slate-800">
+                        <button onclick="editOrderFill('${order.orderId}', '${order.customerName}', '${order.customerPhone}', '${order.mediaPackage}', '${order.status}', '${order.articleUrl || ''}')" class="text-[10px] text-brand-400 hover:underline">Edit</button>
+                        <div class="flex space-x-2">
+                            <button onclick="sendWaNotification('${order.customerPhone}', '${order.orderId}', '${order.customerName}', '${order.status}', '${order.articleUrl || ''}')" class="text-[10px] bg-emerald-600/30 text-emerald-300 px-2 py-0.5 rounded hover:bg-emerald-600/50">
+                                <i class="fa-brands fa-whatsapp mr-1"></i>Kirim WA
+                            </button>
+                            <button onclick="deleteOrder('${id}')" class="text-[10px] text-rose-400 hover:text-rose-300">Hapus</button>
+                        </div>
+                    </div>
+                `;
+                adminOrdersList.appendChild(item);
+            });
+        }, (err) => console.log("Orders listener err:", err));
+
+        // UTILITY: UPDATE WA LINKS
+        function updateWaLinks() {
+            const mainWaBtn = document.getElementById('main-wa-btn');
+            if (mainWaBtn) {
+                mainWaBtn.href = `https://wa.me/${whatsappNumber}?text=Halo%20MediaPress,%20saya%20ingin%20konsultasi%20publikasi%20artikel%20media%20massa.`;
+            }
+        }
+
+        // GLOBAL EXPOSURE FOR DOM EVENTS
+        window.orderMedia = (packageName) => {
+            const msg = encodeURIComponent(`Halo MediaPress, saya ingin pesan: ${packageName}`);
+            window.open(`https://wa.me/${whatsappNumber}?text=${msg}`, '_blank');
+        };
+
+        window.trackOrder = async () => {
+            const inputVal = document.getElementById('track-id-input').value.trim().toUpperCase();
+            const resultBox = document.getElementById('tracking-result-box');
+
+            if (!inputVal) {
+                showToast("Masukkan ID Pesanan Anda", "warning");
+                return;
+            }
+
+            resultBox.classList.remove('hidden');
+            resultBox.innerHTML = `
+                <div class="text-center py-4 text-xs text-slate-400">
+                    <i class="fa-solid fa-spinner animate-spin text-brand-500 text-base mb-1"></i>
+                    <p>Mencari data pesanan ${inputVal}...</p>
+                </div>
+            `;
+
+            try {
+                const docRef = publicDocPath('orders', inputVal);
+                const snap = await getDoc(docRef);
+
+                if (snap.exists()) {
+                    const data = snap.data();
+                    
+                    let progressPercent = 25;
+                    let progressColor = 'bg-amber-400';
+                    if (data.status === 'Proses Penulisan Artikel') { progressPercent = 50; progressColor = 'bg-brand-500'; }
+                    else if (data.status === 'Proses Kirim ke Redaksi Media') { progressPercent = 75; progressColor = 'bg-purple-500'; }
+                    else if (data.status === 'Selesai / Terbit') { progressPercent = 100; progressColor = 'bg-emerald-500'; }
+
+                    resultBox.innerHTML = `
+                        <div class="bg-slate-900 p-4 rounded-xl border border-brand-500/30 space-y-3">
+                            <div class="flex justify-between items-start border-b border-slate-800 pb-2">
+                                <div>
+                                    <span class="text-[10px] text-slate-400">Pemesan:</span>
+                                    <h4 class="text-xs font-bold text-white">${data.customerName}</h4>
+                                </div>
+                                <span class="font-mono text-xs font-bold text-brand-400">${data.orderId}</span>
+                            </div>
+
+                            <div class="text-[11px] space-y-1 text-slate-300">
+                                <div><span class="text-slate-500">Paket:</span> ${data.mediaPackage}</div>
+                                <div><span class="text-slate-500">Tanggal:</span> ${data.date || '-'}</div>
+                                <div><span class="text-slate-500">Status:</span> <strong class="text-white">${data.status}</strong></div>
+                            </div>
+
+                            <!-- Visual Progress Bar -->
+                            <div class="space-y-1">
+                                <div class="flex justify-between text-[9px] text-slate-400">
+                                    <span>Progress</span>
+                                    <span>${progressPercent}%</span>
+                                </div>
+                                <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden border border-slate-700">
+                                    <div class="${progressColor} h-full rounded-full transition-all duration-500" style="width: ${progressPercent}%"></div>
+                                </div>
+                            </div>
+
+                            ${data.status === 'Selesai / Terbit' && data.articleUrl ? `
+                                <a href="${data.articleUrl}" target="_blank" class="mt-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 px-3 rounded-lg flex items-center justify-center space-x-1.5 transition-colors">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Lihat Artikel Terbit</span>
+                                </a>
+                            ` : ''}
+                        </div>
+                    `;
+                } else {
+                    resultBox.innerHTML = `
+                        <div class="bg-rose-950/40 border border-rose-500/30 p-3 rounded-xl text-center">
+                            <i class="fa-solid fa-triangle-exclamation text-rose-400 text-base mb-1"></i>
+                            <p class="text-xs text-rose-300 font-medium">ID Pesanan tidak ditemukan.</p>
+                            <p class="text-[10px] text-slate-400 mt-0.5">Pastikan ID yang Anda masukkan benar (misal: PR-1001).</p>
+                        </div>
+                    `;
+                }
+            } catch (err) {
+                console.error(err);
+                showToast("Gagal memuat status pesanan", "error");
+            }
+        };
+
+        // ADMIN HANDLERS
+        window.toggleAdminPanel = () => {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.toggle('hidden');
+        };
+
+        window.handleAdminLogin = async () => {
+            const email = document.getElementById('admin-email').value;
+            const password = document.getElementById('admin-password').value;
+            const errBox = document.getElementById('login-error-msg');
+            errBox.classList.add('hidden');
+
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                showToast("Login Admin Berhasil!", "success");
+            } catch (err) {
+                errBox.innerText = "Login gagal: Email atau Password salah.";
+                errBox.classList.remove('hidden');
+            }
+        };
+
+        window.handleAdminLogout = async () => {
+            await signOut(auth);
+            await signInAnonymously(auth);
+            showToast("Logout Berhasil", "info");
+        };
+
+        window.switchAdminTab = (tabName) => {
+            ['orders', 'testimonials', 'settings'].forEach(tab => {
+                document.getElementById(`admin-tab-${tab}`).classList.add('hidden');
+                document.getElementById(`tab-btn-${tab}`).className = "py-2 px-3 border-b-2 border-transparent text-slate-400 hover:text-white";
+            });
+
+            document.getElementById(`admin-tab-${tabName}`).classList.remove('hidden');
+            document.getElementById(`tab-btn-${tabName}`).className = "py-2 px-3 border-b-2 border-brand-500 text-brand-400 font-bold";
+        };
+
+        window.generateRandomOrderId = () => {
+            const rand = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('input-order-id').value = `PR-${rand}`;
+        };
+
+        window.saveOrder = async () => {
+            if (!currentUser) return;
+            const orderId = document.getElementById('input-order-id').value.trim().toUpperCase();
+            const customerName = document.getElementById('input-customer-name').value.trim();
+            const customerPhone = document.getElementById('input-customer-phone').value.trim();
+            const mediaPackage = document.getElementById('input-media-package').value.trim();
+            const status = document.getElementById('input-order-status').value;
+            const articleUrl = document.getElementById('input-article-link').value.trim();
+
+            if (!orderId || !customerName) {
+                showToast("Isi ID Pesanan & Nama Pembeli!", "warning");
+                return;
+            }
+
+            try {
+                const today = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+                await setDoc(publicDocPath('orders', orderId), {
+                    orderId,
+                    customerName,
+                    customerPhone,
+                    mediaPackage,
+                    status,
+                    articleUrl,
+                    date: today,
+                    updatedAt: new Date().toISOString()
+                }, { merge: true });
+
+                showToast(`Pesanan ${orderId} berhasil disimpan!`, "success");
+                // Clear Form
+                document.getElementById('input-order-id').value = '';
+                document.getElementById('input-customer-name').value = '';
+                document.getElementById('input-customer-phone').value = '';
+                document.getElementById('input-media-package').value = '';
+                document.getElementById('input-article-link').value = '';
+            } catch (err) {
+                console.error(err);
+                showToast("Gagal menyimpan pesanan", "error");
+            }
+        };
+
+        window.editOrderFill = (id, name, phone, pkg, st, link) => {
+            document.getElementById('input-order-id').value = id;
+            document.getElementById('input-customer-name').value = name;
+            document.getElementById('input-customer-phone').value = phone;
+            document.getElementById('input-media-package').value = pkg;
+            document.getElementById('input-order-status').value = st;
+            document.getElementById('input-article-link').value = link;
+            showToast("Data pesanan disalin ke form edit", "info");
+        };
+
+        window.deleteOrder = async (id) => {
+            if (!currentUser) return;
+            try {
+                await deleteDoc(publicDocPath('orders', id));
+                showToast("Pesanan dihapus", "info");
+            } catch (err) {
+                showToast("Gagal menghapus pesanan", "error");
+            }
+        };
+
+        window.sendWaNotification = (phone, id, name, status, link) => {
+            let num = phone.replace(/[^0-9]/g, '');
+            if (num.startsWith('0')) num = '62' + num.slice(1);
+            if (!num) num = whatsappNumber;
+
+            let text = `Halo Kak ${name},\nBerikut update pesanan publikasi artikel Anda di MediaPress:\n\n📌 ID Pesanan: ${id}\n🔄 Status Terbaru: *${status}*`;
+            if (link) text += `\n🔗 Link Artikel: ${link}`;
+            text += `\n\nCek progress kapan saja di website kami. Terima kasih!`;
+
+            window.open(`https://wa.me/${num}?text=${encodeURIComponent(text)}`, '_blank');
+        };
+
+        window.saveTestimonial = async () => {
+            if (!currentUser) return;
+            const name = document.getElementById('input-testi-name').value.trim();
+            const role = document.getElementById('input-testi-role').value.trim();
+            const rating = parseInt(document.getElementById('input-testi-rating').value);
+            const content = document.getElementById('input-testi-content').value.trim();
+
+            if (!name || !content) {
+                showToast("Isi Nama & Isi Testimoni!", "warning");
+                return;
+            }
+
+            try {
+                const testiId = 'testi_' + Date.now();
+                await setDoc(publicDocPath('testimonials', testiId), {
+                    name, role, rating, content, createdAt: new Date().toISOString()
+                });
+                showToast("Testimoni ditambahkan!", "success");
+                document.getElementById('input-testi-name').value = '';
+                document.getElementById('input-testi-role').value = '';
+                document.getElementById('input-testi-content').value = '';
+            } catch (err) {
+                showToast("Gagal menyimpan testimoni", "error");
+            }
+        };
+
+        window.deleteTestimonial = async (id) => {
+            if (!currentUser) return;
+            try {
+                await deleteDoc(publicDocPath('testimonials', id));
+                showToast("Testimoni dihapus", "info");
+            } catch (err) {
+                showToast("Gagal menghapus", "error");
+            }
+        };
+
+        window.saveSiteSettings = async () => {
+            if (!currentUser) return;
+            const newWa = document.getElementById('input-setting-wa').value.trim();
+            const newPromo = document.getElementById('input-setting-promo').value.trim();
+
+            try {
+                await setDoc(publicDocPath('settings', 'config'), {
+                    whatsappNumber: newWa || "6285922106116",
+                    promoText: newPromo || promoText,
+                    updatedAt: new Date().toISOString()
+                }, { merge: true });
+                showToast("Pengaturan berhasil disimpan!", "success");
+            } catch (err) {
+                showToast("Gagal menyimpan pengaturan", "error");
+            }
+        };
+
+        // Toast Helper
+        function showToast(msg, type = "info") {
+            const toast = document.getElementById('toast');
+            const icon = document.getElementById('toast-icon');
+            document.getElementById('toast-message').innerText = msg;
+
+            if (type === "success") icon.className = "fa-solid fa-circle-check text-emerald-400";
+            else if (type === "warning") icon.className = "fa-solid fa-triangle-exclamation text-amber-400";
+            else if (type === "error") icon.className = "fa-solid fa-circle-xmark text-rose-400";
+            else icon.className = "fa-solid fa-circle-info text-brand-400";
+
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
